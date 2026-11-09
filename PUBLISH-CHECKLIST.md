@@ -1,63 +1,38 @@
-# Publish checklist — Project Plumb VR open source
+# Publish checklist, Project Plumb VR
 
-**Status: STAGED — all decisions made 2026-11-09 (MIT license, holder
-Project Plumb VR, repo `yoohoocoocoollawliet/project-plumb-vr`, publish
-guides/docs now). The repo does NOT exist on GitHub yet. It is ready to
-push once GitHub OAuth is connected and the empty repo is created.**
+**Status: live, with a rewrite in staging.** The repo exists now. It went up 2026-11-09 as `yoohoocoocoollawliet/project-plumb-vr`. The guides and docs went in first, commit 68e6f32, then the logo went in, commit c3e4e66, "Add Project Plumb VR logo". This checklist is for the rewrite that's sitting in staging right now. Check it, then push it the same way.
 
-## Decisions needed from L (blocking)
+## Decisions, all made 2026-11-09
 
-- [x] **License:** MIT — chosen by L on 2026-11-09. See `LICENSE-CHOICE.md`.
-- [x] **Copyright holder name** — Project Plumb VR, chosen by L on 2026-11-09.
-- [x] **GitHub account** — yoohoocoocoollawliet, given by L on 2026-11-09 and verified on GitHub (created 2026-11-01, 0 public repos so far).
-- [x] **GitHub repo name** — `project-plumb-vr`, chosen by L on 2026-11-09. Planned repo: yoohoocoocoollawliet/project-plumb-vr — NOT created yet, do not create it until VR code is ready.
-- [x] **Publish now or wait?** — PUBLISH THE GUIDES/DOCS NOW, chosen by L on 2026-11-09 (overrides the earlier WAIT decision; L said do both the Discord server and the GitHub repo simultaneously). VR code will follow later — the README states clearly there is no playable build yet.
-- [ ] **Repo visibility / community:** public from day one? Any
-  collaborators to add immediately (Developer role holders)?
+- [x] **License:** MIT, picked by L. See `LICENSE-CHOICE.md`.
+- [x] **Copyright holder:** Project Plumb VR.
+- [x] **GitHub account:** yoohoocoocoollawliet. Verified on GitHub, created 2026-11-01, 0 public repos at the time.
+- [x] **Repo name:** `project-plumb-vr`. Live at yoohoocoocoollawliet/project-plumb-vr.
+- [x] **Publish now or wait?** Publish the guides and docs now. That replaced the earlier wait decision. L said do the Discord server and the GitHub repo at the same time. VR code comes later. The README says plainly there's no playable build yet.
+- [ ] **Repo visibility and community:** public from day one, that's done. Any collaborators to add right away? People in the Developer role, if any?
 
-## Pre-publish verification (run every time, right before pushing)
+## Check before every push
 
-- [ ] `git status` is clean of anything in `.gitignore` — especially
-  `*.nsp`, `*.nso`, `*.xci`, `prod.keys`, `RomFS/`, `build/`, `*.apk`.
+- [ ] `git status` is clean of anything in `.gitignore`. Especially `*.nsp`, `*.nso`, `*.xci`, `prod.keys`, `RomFS/`, `build/`, `*.apk`.
 - [ ] Search the whole tree for secrets before pushing:
   `grep -rniE "prod.keys|BEGIN.*PRIVATE KEY|password|api[_-]?key" .`
-  — expect zero hits except the *mentions* in README/docs that say
-  these files are NOT included.
-- [ ] No Nintendo assets: no models, textures, audio, RomFS extracts,
-  no copied OdysseyDecomp source files. OdysseyDecomp stays a
-  submodule / dependency, not vendored code.
-- [x] LICENSE header has the final holder name (Project Plumb VR) and year (2026); the draft banner is removed from `README.md` and the license note in `LICENSE` confirms MIT.
-- [x] `docs/` scope fixed — the 2026-11-09 snapshots no longer present the demo scope as a "conflict to confirm". The confirmed scope is BOTH parts together (opening → Cappy, plus wedding → Cap Kingdom → Topper); see `docs/NOTE.md`.
-- [ ] README "Current status" section is still true on publish day.
-  If the toolchain / NSO / first code has landed, update it — don't
-  publish a stale status.
-- [ ] Repo description set to the tagline: "Bringing the Odyssey into
-  another dimension." Link the Discord server and the research page.
+  You should get zero hits, except the mentions in the README and docs that say these files are NOT included.
+- [ ] No Nintendo assets. No models, textures, audio, RomFS extracts, no copied OdysseyDecomp source files. OdysseyDecomp stays a submodule or a dependency, not code pasted in here.
+- [x] LICENSE has the final holder name (Project Plumb VR) and year (2026).
+- [x] `docs/` scope is fixed. The 2026-11-09 snapshots don't present the demo scope as a conflict anymore. It's both parts together, opening to Cappy, plus wedding to Cap Kingdom to Topper. See `docs/NOTE.md`.
+- [ ] README "Where things stand" is still true on push day. If the toolchain, the NSO, or the first code has moved on, update it. Don't push a stale status.
+- [ ] Repo description is the tagline: "Bringing the Odyssey into another dimension." Link the Discord server too.
 
-## Publish steps (only after the above)
+## How to push
 
-1. Staging is already prepared in a clean directory
-   (`repo-staging/project-plumb-vr/`), git-initialised, with the
-   initial commit made — do NOT `git init` inside
-   `~/workspace/project-plumb-vr/` itself, which contains the decomp
-   snapshots, downloads scratch, and the NSP transfer working files.
-2. Create the empty repo `yoohoocoocoollawliet/project-plumb-vr` on
-   GitHub (requires GitHub OAuth to be connected first — the GitHub
-   connector was not connected at staging time).
-3. Add OdysseyDecomp as a submodule pointing at
-   `https://github.com/MonsterDruide1/OdysseyDecomp` — do not copy its
-   files in.
-4. Push the staged commit to the repo, verify on github.com that no
-   excluded file appears, then announce it in Discord
-   #development-updates.
+1. The staging copy is a clean directory (`repo-staging/project-plumb-vr/`), git set up, initial commit made. Don't run `git init` inside `~/workspace/project-plumb-vr/` itself. That folder has the decomp snapshots, the downloads scratch, and the NSP files.
+2. OdysseyDecomp goes in as a submodule pointing at `https://github.com/MonsterDruide1/OdysseyDecomp`. Don't copy its files in.
+3. Push to the repo, check on github.com that no excluded file showed up, then say something in Discord #development-updates.
 
-## What is NOT in this package (deliberately)
+## What's NOT in this package, on purpose
 
-- The OdysseyDecomp snapshots (`OdysseyDecomp-master/`, `OdysseyDecomp/`)
-  — separate project, stays a dependency
-- `prod.keys` (`workspace/user/files/prod.keys`) — never publish
-- Any NSP / NSO / RomFS — the 5.2 GB SMO v0 NSP transfer is separate
-  and is never published
-- `downloads/` (SwissTransfer helper scripts / test files) — scratch
-- The research-page artifact (`project-plumb-vr-research`) — a web page,
-  not repo content; link to it from the README instead if L wants
+- The OdysseyDecomp snapshots (`OdysseyDecomp-master/`, `OdysseyDecomp/`). Separate project, stays a dependency.
+- `prod.keys` (`workspace/user/files/prod.keys`). Never publish it.
+- Any NSP, NSO, or RomFS. The 5.2 GB SMO v0 NSP is separate and never gets published. It's done downloading now, 5,611,009,601 bytes, and NSO extraction has started, but that stays local.
+- `downloads/` (SwissTransfer helper scripts and test files). Scratch.
+- The research page artifact (`project-plumb-vr-research`). It's a web page, not repo content. Link to it from the README if I want it there.

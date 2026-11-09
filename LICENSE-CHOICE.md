@@ -1,80 +1,51 @@
-# License choice for Project Plumb VR
+# Why MIT
 
-**Status: DECIDED — MIT, chosen by L on 2026-11-09. Copyright holder: Project Plumb VR.**
+**Decided. MIT, picked by me on 2026-11-09. Copyright holder: Project Plumb VR.**
 
-The file `LICENSE` in this package currently contains the MIT License as
-the recommended default. This note explains the choice and the
-alternatives, so L can pick with eyes open.
+The `LICENSE` file has the MIT text. This file is just the reasoning, and what I passed on, so it's on the record.
 
-## Recommendation: MIT
+## I picked MIT because it's simple
 
-**Why MIT fits this project:**
+- It's the simplest license people actually know. Nobody has to ask a lawyer.
+- It's permissive. Anyone can use the code, change it, share it, even in a closed project, as long as they keep the copyright notice. That keeps the door open for contributors, testers, and anyone who wants to build on the VR host, renderer, or input code.
+- It fits the stuff around it. smo-recomp, recomp tooling, most Quest homebrew, they're MIT or permissive too.
+- It's short. One page. Easy to put in an APK about screen.
+- No copyleft strings attached, so it doesn't fight with linking the Android NDK, the OpenXR loader, or Quest system libraries.
 
-- Simplest and most common license for game-port / mod scaffolding work.
-  Everyone understands it; no one has to ask a lawyer.
-- Permissive: anyone can use, modify, and distribute the code, including
-  in commercial / closed projects, as long as they keep the copyright
-  notice. That lowers the barrier for contributors, testers, and anyone
-  who wants to build on the VR host / renderer / input code.
-- Compatible with the decomp ecosystem around it (smo-recomp, recomp
-  tooling, and most Quest homebrew are MIT / permissive).
-- Short — one page, easy to include in an APK's about screen.
-- No copyleft obligations that would clash with linking proprietary
-  libraries (Android NDK, OpenXR loader, Quest system libraries).
+**The catch.** Someone could take this VR code, make it better, and ship it closed without giving anything back. MIT lets them do that. I know that. I picked it anyway.
 
-**Downside:** someone could take Plumb's VR code, improve it, and ship
-it closed-source without giving anything back. MIT allows that. If that
-bothers L, see GPLv3 below.
+## The one I passed on: GPLv3
 
-## Alternative 1: GPLv3
+GPLv3 is copyleft. If you ship a changed version, you have to release your source under GPLv3 too. Everything built from it stays open.
 
-- **What it means:** copyleft. Anyone who distributes a modified version
-  must release their source under GPLv3 too. Derivatives stay open.
-- **Pros:** strongest guarantee the project (and anything built from it)
-  stays open forever; no one can privatise L's work.
-- **Cons:** scares off some contributors and downstream projects; it is
-  harder to combine with proprietary SDKs / store distribution, and it
-  puts a compliance burden on anyone sideloading or shipping builds.
-  The Quest / Android ecosystem is mostly permissive, so GPLv3 would be
-  swimming upstream. Also, GPLv3 cannot magically license Nintendo's
-  code or OdysseyDecomp's unlicensed code — its scope would still be
-  Plumb's original work only.
+That's the strongest way to keep this project open forever, and nobody can take my work private. But it scares some people off, it's harder to mix with proprietary SDKs and store distribution, and it puts paperwork on anyone sideloading or shipping builds. The Quest and Android world is mostly permissive, so GPLv3 would be swimming upstream here.
 
-**Pick GPLv3 if:** keeping everything derived from Plumb open matters
-more to L than maximising contributors and downstream use.
+And it wouldn't change the important limits. GPLv3 can't license Nintendo's code or OdysseyDecomp's unlicensed code. It would still only cover my own work.
 
-## Alternative 2: Apache License 2.0
+Pick GPLv3 if keeping everything derived from this open matters more than getting the most contributors and downstream use. It didn't, for me.
 
-- **What it means:** like MIT, permissive — use, modify, distribute,
-  including commercially — plus an explicit patent grant from
-  contributors, and a requirement to note changes.
-- **Pros:** same openness as MIT, with better patent protection; a
-  standard, well-understood license.
-- **Cons:** longer and more formal than MIT; the patent clause is
-  mostly irrelevant for a fan game port, so it adds words for little
-  practical benefit here.
+## The other one I passed on: Apache 2.0
 
-**Pick Apache 2.0 if:** L wants MIT-style permissiveness but with a
-patent grant for peace of mind.
+Apache 2.0 is like MIT, permissive, use it, change it, ship it, even commercially. It adds an explicit patent grant from contributors, and you have to note your changes.
 
-## What the license does NOT do
+Same openness as MIT, better patent cover, standard license, everyone knows it. But it's longer and more formal, and the patent part doesn't really matter for a fan game port. More words for not much gain here.
 
-Whichever license L picks, it covers **only Project Plumb VR's original
-code and docs** — the VR host, OpenXR renderer, input/camera code, build
-scripts, and documentation written for this project.
+Pick Apache 2.0 if you want MIT style with a patent grant for peace of mind. I didn't need it.
 
-It does **not** license:
+## What the license doesn't cover
+
+Whatever license I picked, it only covers **Project Plumb VR's own code and docs**. The VR host, the OpenXR renderer, the input and camera code, the build scripts, the docs I wrote for this project.
+
+It does **not** cover:
+
 - Nintendo's game, code, assets, characters, or trademarks
-- OdysseyDecomp's code (separate project, no LICENSE file at the time
-  of writing — do not copy its files into this repo)
-- Any `.nsp` / `.nso` / RomFS dump, `prod.keys`, or other game files
-  (never included, never licensed)
+- OdysseyDecomp's code. Separate project, no LICENSE file at the time of writing, so don't copy its files into this repo.
+- Any `.nsp`, `.nso`, or RomFS dump, `prod.keys`, or other game files. Never included, never licensed.
 
-## Decision — made 2026-11-09
+## The decision, for the record
 
-1. **MIT** — chosen by L.
+1. **MIT**, picked by L on 2026-11-09.
 2. Copyright holder: **Project Plumb VR**.
 3. Copyright year: **2026**.
 
-The final MIT text is in `LICENSE`. This file is kept as a record of
-the alternatives considered.
+The final MIT text is in `LICENSE`.

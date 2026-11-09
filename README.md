@@ -2,152 +2,104 @@
 
 > **Bringing the Odyssey into another dimension.**
 >
-> A native Super Mario Odyssey VR port for Meta Quest 3.
-
-> **Status:** The guides and project documentation are published here
-> now. The VR code is still in progress — there is no playable build yet.
-> Repository: <https://github.com/yoohoocoocoollawliet/project-plumb-vr>
-> — MIT License, © 2026 Project Plumb VR. See
-> [PUBLISH-CHECKLIST.md](PUBLISH-CHECKLIST.md).
+> A native Super Mario Odyssey VR port for Meta Quest 3 and Quest 3S.
 
 ![Project Plumb VR logo](assets/project-plumb-vr-logo.png)
 
 ## What this is
 
-Project Plumb VR is a fan project to port **Super Mario Odyssey (version
-1.0.0)** to VR — natively, on the **Meta Quest 3**, as a standalone
-**Android ARM64 OpenXR APK**. No PC required, no WebXR, no browser game,
-no flat-screen spectator app, and no video-streaming overlay.
+I'm L. I started this because I wanted to actually be Mario in VR, not watch him on a flat screen.
 
-The goal is to *be* Mario in first person: look down and see his overalls,
-reach out and your hands are his white gloves, throw Cappy with a real
-throwing motion. Quest 3 inside-out tracking does it all — no base
-stations.
+Project Plumb VR is a fan port of **Super Mario Odyssey (version 1.0.0)** for the **Meta Quest 3 and Quest 3S**. It's a standalone **Android ARM64 OpenXR APK**. No PC. No WebXR. No browser game. No streaming a flat game into a headset.
 
-This is **not** Nintendo's Labo VR mode (that arrived in update 1.3.0 and
-is only three small side missions). SMO 1.0.0 has no VR code at all, so
-everything VR — stereo rendering, head-tracked camera, 6DoF, Touch
-controllers, and decoupling the game's 60-steps-per-second logic so it can
-run at Quest refresh rates — has to be built from scratch.
+The idea is simple. Look down, see Mario's overalls. Reach out, your hands are his white gloves. Throw Cappy with a real throw. The Quest 3 and 3S do the tracking themselves, inside out, no base stations. Both headsets run the same chip, Snapdragon XR2 Gen 2, so the same APK should run on both.
+
+This is not Nintendo's Labo VR. That came in update 1.3.0 and it's only three small side missions. SMO 1.0.0 has no VR in it at all. So the stereo rendering, the head tracked camera, 6DoF, the Touch controllers, all of it has to be built from scratch. The hard part is the game logic. It runs at 60 steps a second, and VR needs to run faster than that. Splitting those two apart is the core problem here.
 
 ## Demo scope
 
-The first playable slice is **both parts together**:
+The first playable slice is both parts together. Not one or the other, both.
 
-- **Part 1 — Opening:** the Bowser encounter aboard his airship → Mario
-  is knocked off → falls → first meeting with Cappy in Cap Kingdom.
-- **Part 2 — Wedding → Cap Kingdom:** interrupting Bowser's wedding →
-  Cap Kingdom → ends after defeating **Topper**.
+**Part 1, the opening.** Bowser's airship, the fight, Mario gets knocked off, he falls, then he meets Cappy in Cap Kingdom.
 
-Topper is the right end point for the demo: he takes 2 hits (the only
-Broodal fight that needs 2), gives no Power Moon, and beating him opens
-the Spark pylon onward. Cap Kingdom also has 0 Power Moons collectable on
-a first visit, so the demo's payoff is unlocking the next kingdom.
+**Part 2, the wedding.** You crash Bowser's wedding, then it's Cap Kingdom again, and the demo ends after you beat **Topper**.
 
-## Long-term goal
+Topper makes sense as the end point. He takes 2 hits, which is the only Broodal fight that needs 2. He doesn't give a Power Moon. Beating him opens the Spark pylon onward. And Cap Kingdom has 0 Power Moons you can grab on a first visit, so the payoff here is unlocking the next kingdom, not a moon count.
 
-Once the game is fully decompiled, port **all** of Super Mario Odyssey to
-VR — the full game as shown in the Nintendo Switch Presentation 2017
-trailer (<https://www.youtube.com/watch?v=5kcdRBHM7kM>): all 17 kingdoms,
-all 880 Power Moons, all 52 captures.
+## The long term goal
 
-## Design
+Once the game is fully decompiled, I want the whole thing in VR. All of it, like in the Nintendo Switch Presentation 2017 trailer (<https://www.youtube.com/watch?v=5kcdRBHM7kM>). All 17 kingdoms, all 880 Power Moons, all 52 captures.
 
-- **Camera:** comfortable third-person VR by default, Mario visible,
-  player can physically look around. Adjustable distance/height, smooth
-  and snap turning, recenter, optional comfort vignette. No forced
-  rotation, no excessive acceleration.
-- **Capture camera rule:** first-person depends on the capture —
-  **T-Rex first-person, Sherm (tank) first-person**, everything else
-  third-person.
-- **Being Mario:** first-person play where it fits, hands are Mario's
-  gloves, inside-out body tracking.
-- **Performance target:** 72 FPS minimum on standalone Quest 3, higher
-  refresh rates as an optimisation target.
-- **Controls (planned):**
+That's a long way off. The demo comes first.
 
-  | Controller | Input | Action |
-  |---|---|---|
-  | Left | Thumbstick | Mario movement |
-  | Left | X | Secondary action |
-  | Left | Y | Menu |
-  | Right | Thumbstick | Camera control |
-  | Right | A | Jump |
-  | Right | B | Secondary action |
-  | Right | Trigger | Cappy-related action |
-  | Either | Grip | Contextual interaction |
+## How it should play
 
-## Current status — be honest, this is early
+**Camera.** Third person VR most of the time, Mario in view, and you can look around on your own. You can change the distance and height, use smooth turning or snap turning, recenter whenever, and turn on a comfort vignette if you want it. Nothing should force your view around. No sudden spins.
 
-**There is no playable build yet. There is no VR code yet.**
+**Captures change the camera.** It depends what you're controlling. **T-Rex is first person. Sherm, the tank, is first person.** Everything else stays third person.
+
+**Being Mario.** First person where it fits, hands are Mario's gloves, inside out body tracking.
+
+**Performance.** 72 FPS minimum on a standalone Quest 3 and Quest 3S. Higher refresh rates later, if I can get them.
+
+**Controls, planned:**
+
+| Controller | Input | Action |
+|---|---|---|
+| Left | Thumbstick | Move Mario |
+| Left | X | Secondary action |
+| Left | Y | Menu |
+| Right | Thumbstick | Camera |
+| Right | A | Jump |
+| Right | B | Secondary action |
+| Right | Trigger | Cappy |
+| Either | Grip | Contextual interaction |
+
+## Where things stand
+
+Be honest about this. It's early.
+
+**There is no playable build yet. There is no VR code yet. There is no APK.**
 
 As of 2026-11-09:
 
-- ✅ Environment audited (Ubuntu 24.04 VM, git/python/cmake/gcc present)
-- ✅ Decomp snapshot on disk (OdysseyDecomp-master, 2026-09-29, 2,244 files)
-- ✅ Fresh OdysseyDecomp clone started, with submodules to initialise
-- ✅ Research done: opening/wedding/Cap Kingdom/Topper, all 17 kingdoms,
-  52 captures, decomp and recomp landscape — see `docs/`
-- 🔄 Android SDK / NDK / JDK / ninja / clang / Rust toolchain install
-  in progress (not finished at the time of writing)
-- ❌ No main NSO extracted yet — the 1.0.0 NSP dump transfer is in
-  progress separately and is **not** in this repo
-- ❌ No Android/OpenXR host code written yet
-- ❌ No APK, no sideloadable build
+- Environment audited. Ubuntu 24.04 VM, git, python, cmake, gcc all there.
+- Toolchain prep done 2026-11-09. Android SDK is in, NDK r27c, ninja, clang 18, JDK 17, Rust, and a Python venv with the decomp modules. Still missing: OpenXR SDK and Gradle.
+- Decomp snapshot on disk. OdysseyDecomp-master, 2026-09-29, 2,244 files. Plus a fresh OdysseyDecomp clone, submodules filled.
+- The NSP is done. The Super Mario Odyssey 1.0.0 NSP finished downloading 2026-11-09 around 11:08, verified at 5,611,009,601 bytes exactly, PFS0 header, 8 files inside. It's not in this repo and it never will be.
+- NSO extraction has started. That's pulling the main NSO out of the ExeFS with my own prod.keys.
+- Research is done for the opening, the wedding, Cap Kingdom, Topper, all 17 kingdoms, and the 52 captures. It's in `docs/`.
+- No Android or OpenXR host code written yet.
+- No APK, nothing to sideload yet.
 
-The decompilation itself is the long pole: the 2026-09-29 snapshot has
-source for ~19% of the game's object files by file count (597 of 3,126
-`.o` entries). Published progress figures disagree by date and method —
-the project's own page read 25.611% matching on 2026-11-09, other
-trackers reported 15.77% on 2026-10-26 and 16% on 2026-11-06 — so no
-single percentage is quoted here as the truth. A successful decomp build
-does **not** produce a playable game; missing systems must be decompiled
-or reimplemented for the demo slice.
+The decomp is the long pole. The 2026-09-29 snapshot has source for about 19% of the game's object files by file count, 597 of 3,126 `.o` entries. The published numbers don't agree with each other, so I'm not picking one and calling it the truth. The project's own page said 25.611% matching on 2026-11-09. Other trackers said 15.77% on 2026-10-26 and 16% on 2026-11-06. Different dates, different ways of counting. And a decomp build that works still isn't a playable game. The missing systems have to be decompiled or written from scratch for the demo slice.
 
-## Relationship to OdysseyDecomp
+## OdysseyDecomp
 
-Project Plumb VR is **not** OdysseyDecomp, and it does not vendor or
-re-publish OdysseyDecomp's code. OdysseyDecomp
-(<https://github.com/MonsterDruide1/OdysseyDecomp>) is a separate,
-independent WIP decompilation of SMO 1.0.0 by its own team. Plumb uses
-it as a **reference and dependency** (via a git submodule / fresh clone)
-and builds its own original VR host, renderer, input, and camera code
-on top of the decompiled logic where it exists.
+This project is not OdysseyDecomp, and it doesn't copy OdysseyDecomp's code in. OdysseyDecomp (<https://github.com/MonsterDruide1/OdysseyDecomp>) is its own thing, its own team, a work in progress decomp of SMO 1.0.0. I use it as a reference and a dependency, through a git submodule or a fresh clone, and I build my own VR host, renderer, input, and camera code on top of the decompiled logic where it exists.
 
-Note: at the time of writing, the OdysseyDecomp repository contains **no
-LICENSE file**, so its code is technically all-rights-reserved by
-default despite being public on GitHub. Do not copy its files into this
-repo. If that changes upstream, update this note.
+One thing to know. At the time of writing, OdysseyDecomp has **no LICENSE file**. That means its code is all rights reserved by default, even though it's public on GitHub. So don't copy its files into this repo. If that changes upstream, this note needs updating.
 
-Related, unaffiliated work: **Power Moon Recomp** (static recompilation
-of 1.0.0 for PC) and **smo-recomp** (a separate 1.4.1 recomp project),
-and **Power Moon VR** (an OpenXR overlay for Power Moon Recomp). Plumb
-is a native Quest port, not an overlay and not a recomp.
+Other projects in the same space, none of them mine: **Power Moon Recomp** (static recomp of 1.0.0 for PC) and **smo-recomp** (a separate 1.4.1 recomp project), plus **Power Moon VR** (an OpenXR overlay for Power Moon Recomp). Plumb is a native Quest port. Not an overlay, not a recomp.
 
 ## What you need to build it (not included)
 
-You must supply your own, legally dumped copy. **None of the following
-is in this repository, and none of it ever will be:**
+You have to bring your own legally dumped copy. **None of this is in the repo, and none of it ever will be:**
 
-- Super Mario Odyssey **1.0.0** — your own dump from your own Switch
-  (the main NSO from its ExeFS is what the decomp setup needs; RomFS
-  assets are needed for a playable game)
-- Your `prod.keys` — needed only to extract your own dump
-- Any `.nsp`, `.nso`, `.xci`, RomFS files, game models, audio, or
-  textures
+- Super Mario Odyssey **1.0.0**, dumped from your own Switch. The main NSO from its ExeFS is what the decomp setup needs. RomFS assets are needed for a playable game.
+- Your `prod.keys`, only for extracting your own dump.
+- Any `.nsp`, `.nso`, `.xci`, RomFS files, game models, audio, or textures.
 
-See [`.gitignore`](.gitignore) — all of these are excluded, and any
-contribution containing them will be rejected.
+Check [`.gitignore`](.gitignore). All of that is excluded. Anything with that stuff in it gets rejected.
 
-## Building (preliminary)
+## Building (early days)
 
-Full instructions live in [`docs/BUILD_INSTRUCTIONS.md`](docs/BUILD_INSTRUCTIONS.md).
-Short version, once the toolchain is installed:
+Full instructions are in [`docs/BUILD_INSTRUCTIONS.md`](docs/BUILD_INSTRUCTIONS.md). Short version, once the toolchain is in:
 
 ```bash
 # 1. Clone with submodules (do NOT use a bare zip extract)
 git clone --recursive https://github.com/MonsterDruide1/OdysseyDecomp
-# (in the Plumb repo, OdysseyDecomp is a submodule — see docs)
+# (in the Plumb repo, OdysseyDecomp is a submodule, see docs)
 
 # 2. Extract your own 1.0.0 main NSO from your own dump, then:
 tools/setup.py [path to your main NSO]
@@ -155,41 +107,24 @@ tools/build.py
 tools/check
 ```
 
-That verifies the decomp only — it does not make a playable game, and
-the Android/OpenXR build steps are still to be written once the SDK/NDK
-install lands. Install durable tools under `~/workspace/`, not `/usr`,
-`/opt`, or `/tmp`. See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md)
-and [`docs/BLOCKERS.md`](docs/BLOCKERS.md) for the environment audit and
-open blockers.
+That only checks the decomp. It doesn't make a playable game. The Android and OpenXR build steps still need writing. Put durable tools under `~/workspace/`, not `/usr`, `/opt`, or `/tmp`. See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) and [`docs/BLOCKERS.md`](docs/BLOCKERS.md) for the environment audit and what's still blocked.
+
+APK signing is an end of demo step only. Don't compile or sign anything yet.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). In short: original code and
-docs only, no Nintendo assets, no keys, no dumps. Decomp contributions
-belong upstream in OdysseyDecomp, not here. VR/host, rendering, input,
-camera, build, and testing help is where this project needs people.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Short version: your own code and docs only, no Nintendo assets, no keys, no dumps. Decomp work goes upstream to OdysseyDecomp, not here. The help I actually need is VR and host code, rendering, input, camera, builds, and testing.
 
 ## License
 
-The original code and documentation in this repository are licensed
-under the MIT License — see [LICENSE](LICENSE). **That license covers
-only Project Plumb VR's original work.** It does not cover Nintendo's
-game, assets, or code, and it does not cover OdysseyDecomp's code.
-License: **MIT, confirmed 2026-11-09**, copyright holder Project Plumb
-VR. See [LICENSE-CHOICE.md](LICENSE-CHOICE.md) for why MIT was chosen
-over GPLv3 / Apache 2.0.
+The original code and docs in this repo are under the MIT License. See [LICENSE](LICENSE). **That license only covers Project Plumb VR's own work.** It doesn't cover Nintendo's game, assets, or code, and it doesn't cover OdysseyDecomp's code. MIT, picked 2026-11-09, copyright holder Project Plumb VR. There's more on why MIT in [LICENSE-CHOICE.md](LICENSE-CHOICE.md).
 
-## Legal / disclaimer
+## Legal
 
-Project Plumb VR is an unofficial fan project. It is not affiliated
-with, endorsed by, or connected to Nintendo. Super Mario Odyssey, Mario,
-Cappy, and all related characters and assets are trademarks / copyrights
-of Nintendo. This repository contains no Nintendo code, assets, or game
-files. You need your own legally obtained copy of the game to build or
-play anything from this project.
+Project Plumb VR is an unofficial fan project. It's not affiliated with Nintendo, not endorsed by them, not connected to them. Super Mario Odyssey, Mario, Cappy, and all the related characters and assets are Nintendo's trademarks and copyrights. This repo has no Nintendo code, assets, or game files in it. You need your own legally obtained copy of the game to build or play anything from this project.
 
-## Acknowledgements
+## Thanks
 
-- The OdysseyDecomp team, for the decompilation this project builds on
-- The SMO modding / decomp community
-- L — project founder, Quest 3, no PC, doing it anyway
+- The OdysseyDecomp team, for the decomp this is built on
+- The SMO modding and decomp community
+- L, project founder, Quest 3, no PC, doing it anyway
