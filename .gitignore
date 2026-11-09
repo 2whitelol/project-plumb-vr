@@ -100,3 +100,7 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
+
+# --- Manus bridge: vr-foundation code lives under app/src/main/ ---
+# The bare "main" pattern above (extracted NSO binary) would otherwise ignore it.
+!vr-foundation/app/src/main/
