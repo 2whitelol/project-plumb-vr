@@ -1,7 +1,7 @@
 # Project status
 
 Last updated: 2026-11-09
-Owner: L, Quest 3, no PC. Developer: Aidan, Muse Secure VM.
+Owner: White, Quest 3, no PC. Developer: Aidan, Muse Secure VM.
 
 ## Where I'm at
 

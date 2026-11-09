@@ -8,7 +8,7 @@
 
 ## What this is
 
-I'm L. I started this because I wanted to actually be Mario in VR, not watch him on a flat screen.
+I'm White. I started this because I wanted to actually be Mario in VR, not watch him on a flat screen.
 
 Project Plumb VR is a fan port of **Super Mario Odyssey (version 1.0.0)** for the **Meta Quest 3 and Quest 3S**. It's a standalone **Android ARM64 OpenXR APK**. No PC. No WebXR. No browser game. No streaming a flat game into a headset.
 
@@ -130,4 +130,4 @@ Project Plumb VR is an unofficial fan project. It's not affiliated with Nintendo
 
 - The OdysseyDecomp team, for the decomp this is built on
 - The SMO modding and decomp community
-- L, project founder, Quest 3, no PC, doing it anyway
+- White, project founder, Quest 3, no PC, doing it anyway

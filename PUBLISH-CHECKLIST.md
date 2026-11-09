@@ -8,7 +8,7 @@
 - [x] **Copyright holder:** Project Plumb VR.
 - [x] **GitHub account:** yoohoocoocoollawliet. Verified on GitHub, created 2026-11-01, 0 public repos at the time.
 - [x] **Repo name:** `project-plumb-vr`. Live at yoohoocoocoollawliet/project-plumb-vr.
-- [x] **Publish now or wait?** Publish the guides and docs now. That replaced the earlier wait decision. L said do the Discord server and the GitHub repo at the same time. VR code comes later. The README says plainly there's no playable build yet.
+- [x] **Publish now or wait?** Publish the guides and docs now. That replaced the earlier wait decision. White said do the Discord server and the GitHub repo at the same time. VR code comes later. The README says plainly there's no playable build yet.
 - [ ] **Repo visibility and community:** public from day one, that's done. Any collaborators to add right away? People in the Developer role, if any?
 
 ## Check before every push

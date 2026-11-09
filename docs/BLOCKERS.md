@@ -38,4 +38,4 @@ This is the long pole of the project, not the Android or OpenXR shell.
 
 ## 6. No Quest test device access from the VM
 
-The VM can't install or run anything on L's Quest 3 directly. APKs have to come back as downloadable files for L to sideload and install from the Quest 3 or 3S. Both headsets run the same chip, Snapdragon XR2 Gen 2, so the same APK should run on both, but testing still depends on L running it and reporting back.
+The VM can't install or run anything on White's Quest 3 directly. APKs have to come back as downloadable files for White to sideload and install from the Quest 3 or 3S. Both headsets run the same chip, Snapdragon XR2 Gen 2, so the same APK should run on both, but testing still depends on White running it and reporting back.
