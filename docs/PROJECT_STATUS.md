@@ -37,7 +37,7 @@ Milestone 2, looking at the repo and the decomp, is in progress.
 - Part 1, the opening: Bowser on his airship, Mario gets knocked off, falls, first meeting with Cappy in Cap Kingdom.
 - Part 2, the wedding to Cap Kingdom: crash Bowser's wedding, Cap Kingdom, ends after beating Topper.
 - Camera rule, from me, 2026-11-09: first person depends on the capture. T-Rex first person, tank first person, everything else third person.
-- Controls, from the master prompt: left stick moves, X is secondary, Y is menu. Right stick is camera, A is jump, B is secondary, trigger is Cappy, grip is contextual.
+- Controls, from me, 2026-11-09, changed from the master prompt: left stick moves, X is secondary, Y is menu. Right stick is camera, A is jump, B is secondary, grip is contextual when not holding Cappy. Cappy is not a button press to throw him. You move your hand, grab him with the grip button, and throw him by letting go of the grip in a throw motion.
 
 ## Files I have
 

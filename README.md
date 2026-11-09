@@ -44,6 +44,8 @@ That's a long way off. The demo comes first.
 
 **Controls, planned:**
 
+Cappy is not a button press to throw him. You move your hand, grab him with the grip button, and throw him by letting go of the grip in a throw motion. Reach out and your hand is Mario's glove, hold grip to grab Cappy off Mario's head, throw your arm, release grip, and Cappy flies where you threw him.
+
 | Controller | Input | Action |
 |---|---|---|
 | Left | Thumbstick | Move Mario |
@@ -52,8 +54,9 @@ That's a long way off. The demo comes first.
 | Right | Thumbstick | Camera |
 | Right | A | Jump |
 | Right | B | Secondary action |
-| Right | Trigger | Cappy |
-| Either | Grip | Contextual interaction |
+| Right | Grip (hold) | Grab Cappy |
+| Right | Grip (release in throw motion) | Throw Cappy |
+| Either | Grip | Contextual interaction when not holding Cappy |
 
 ## Where things stand
 

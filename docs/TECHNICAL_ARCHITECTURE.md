@@ -37,7 +37,8 @@ A native Android ARM64 OpenXR game on a Meta Quest 3 and Quest 3S, built from Su
 ## Input, from the master prompt, to fit the real input code later
 
 - Left controller: thumbstick moves, X is secondary, Y is menu.
-- Right controller: thumbstick is camera, A is jump, B is secondary, trigger is Cappy, grip is contextual.
+- Right controller: thumbstick is camera, A is jump, B is secondary, grip is contextual when not holding Cappy.
+- Cappy is not a button press to throw him. You move your hand, grab him with the grip button, and throw him by letting go of the grip in a throw motion. Reach out with your hand, your hand is Mario's glove, hold grip to grab Cappy, throw your arm, release grip, and Cappy flies where you threw him.
 - Keep Mario's physics intact: movement, jumping, momentum, acceleration, air control, ground movement, collision, combat, and how he interacts with the world.
 
 ## Build and host
