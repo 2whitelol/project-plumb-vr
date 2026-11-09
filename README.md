@@ -1,5 +1,7 @@
 # Project Plumb VR
 
+[![Discord](https://img.shields.io/badge/Discord-Join%20Project%20Plumb%20VR-5865F2?logo=discord&logoColor=white)](https://discord.gg/XUtAtkdumP)
+
 > **Bringing the Odyssey into another dimension.**
 >
 > A native Super Mario Odyssey VR port for Meta Quest 3 and Quest 3S.
