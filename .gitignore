@@ -1,0 +1,102 @@
+# Project Plumb VR — .gitignore
+# NEVER commit Nintendo game files, keys, or dumps. Ever.
+# If you accidentally add one, remove it from history before pushing.
+
+# --- Nintendo game files / dumps — NEVER PUBLISH ---
+*.nsp
+*.nso
+*.xci
+*.nca
+*.tik
+*.cert
+*.rom
+*.iso
+prod.keys
+prod_keys.txt
+title.keys
+keys.txt
+keys.dat
+*.keys
+# Dumped game data
+RomFS/
+romfs/
+ExeFS/
+exefs/
+rom/
+dump/
+*.sav
+*.dat
+# Extracted NSO / build artefacts from the decomp setup
+main
+main.nso
+build/
+build-*/
+dist/
+bin/
+*.elf
+*.so
+*.dll
+*.o
+*.a
+
+# --- Android / Quest build outputs ---
+*.apk
+*.aab
+*.apks
+local.properties
+*.keystore
+*.jks
+gradle/
+.gradle/
+app/build/
+*.dex
+*.class
+
+# --- Android SDK / NDK local paths ---
+android-sdk/
+android-ndk/
+sdk/
+ndk/
+Android/
+local.properties
+*.iml
+
+# --- Decomp toolchain caches (large, re-downloadable) ---
+toolchain/
+OdysseyDecompToolsCache/
+.cache/
+ccache/
+*.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# --- C/C++ build ---
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.d
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- OS / misc ---
+*.log
+*.tmp
+*.bak

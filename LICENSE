@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 L
+Copyright (c) 2026 Project Plumb VR
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+NOTE — license confirmed: MIT, chosen by L on 2026-11-09. Copyright holder confirmed: Project Plumb VR.
+
+Scope: this license covers ONLY Project Plumb VR's original code and
+documentation. It does not cover Nintendo's game, code, or assets, and it
+does not cover OdysseyDecomp's code (a separate project with no LICENSE
+file of its own at the time of writing).
