@@ -1,6 +1,6 @@
 # Contributing to Project Plumb VR
 
-Thanks for wanting to help. This is a fan project, run by one person on a Quest 3, so here's how to not waste each other's time.
+Thanks for wanting to help. This is a fan project, run by one person with a Quest 3, so here's how to not waste each other's time.
 
 ## The one hard rule
 
