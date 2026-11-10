@@ -1,7 +1,7 @@
 # Project Plumb VR
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Project%20Plumb%20VR-5865F2?logo=discord&logoColor=white)](https://discord.gg/XUtAtkdumP)
-[![Demo progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F2whitelol%2Fproject-plumb-vr%2Fmain%2Fdemo-progress.json)](docs/DEMO_PROGRESS.md)
+[![Demo progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F2whitelol%2Fproject-plumb-vr%2Fmain%2Fdemo-progress.json&cacheSeconds=60)](docs/DEMO_PROGRESS.md)
 
 > **Bringing the Odyssey into another dimension.**
 >
