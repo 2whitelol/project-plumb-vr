@@ -1,7 +1,7 @@
 # Project Plumb VR
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Project%20Plumb%20VR-5865F2?logo=discord&logoColor=white)](https://discord.gg/XUtAtkdumP)
-[![Demo progress](https://img.shields.io/badge/Demo%20decomp-32%25%20(802%2F2%2C535%20functions)-E74C3C)](docs/DEMO_PROGRESS.md)
+[![Demo progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F2whitelol%2Fproject-plumb-vr%2Fmain%2Fdemo-progress.json)](docs/DEMO_PROGRESS.md)
 
 > **Bringing the Odyssey into another dimension.**
 >
@@ -47,7 +47,7 @@ That's a long way off. The demo comes first.
 
 **Controls, planned:**
 
-Cappy is not a button press to throw him. You move your hand, grab him with the grip button, and throw him by letting go of the grip in a throw motion. Reach out and your hand is Mario's glove, hold grip to grab Cappy off Mario's head, throw your arm, release grip, and Cappy flies where you threw him.
+Cappy is not a button press to throw him. You move your hand, grab him with the grip button, and throw him by letting go of the grip in a throw motion. Reach out and your hand is Mario's glove, hold grip to grab Cappy off Mario's head, throw your arm, release grip, and Cappy flies where you threw him. In the real build, after a throw Cappy stays in the air, rises slightly, then returns to your head. The demo's quick boomerang return is just a stand-in for that.
 
 | Controller | Input | Action |
 |---|---|---|
@@ -67,7 +67,7 @@ Be honest about this. It's early.
 
 **There is no playable demo yet.** But there are test APKs running on a Quest 3 now. The latest one, v0.12, holds the world still when you turn your head, and Cappy grabs and stays with your hand. There is still a shader issue making his colours noisy, and the throw still needs work.
 
-**Demo decomp is at 32%: 802 / 2,535 functions matched.** Topper is 119/179, Cappy is 121/189, Bowser is the big blocker at 192/1,147. Full breakdown in [`docs/DEMO_PROGRESS.md`](docs/DEMO_PROGRESS.md). The badge at the top of this page shows the same number, and it gets updated by hand when the count moves.
+**Demo decomp is at 32%: 802 / 2,535 functions matched.** Topper is 119/179, Cappy is 121/189, Bowser is the big blocker at 192/1,147. Full breakdown in [`docs/DEMO_PROGRESS.md`](docs/DEMO_PROGRESS.md). The badge at the top of this page shows the same number, and it updates on its own as decomp lands.
 
 As of 2026-11-09:
 
