@@ -34,6 +34,18 @@ Badge now:
 
 It links here, so anyone can see what the number counts.
 
+## Next milestone: 50%
+
+Set 2026-11-09. The demo is ready when **1,268 / 2,535 functions match (50%)**. That is 466 more than the 802 counted now.
+
+How it adds up:
+
+- Finish Topper (60 left), Cappy (68 left), and the NPCs (70 left): 198
+- Mario core movement, Jump, WallCatch, PoleClimb, Rolling, Wait, SpinCap: about 180 of the 235 left there
+- Bowser attack states, KoopaCap, KoopaCapPlayer, ThrowCap, RingBeam: about 90 of the 955 left there
+
+Matching is decomp progress, not a playable demo. 50% matched does not mean half the demo is playable, the VR wiring is separate work.
+
 ## What this number is not
 
 It is not the whole game. The whole decomp is 19,974 / 74,171 functions matched (26.9%) at the same time, and that is a different count.
