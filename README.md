@@ -1,6 +1,7 @@
 # Project Plumb VR
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Project%20Plumb%20VR-5865F2?logo=discord&logoColor=white)](https://discord.gg/XUtAtkdumP)
+[![Demo progress](https://img.shields.io/badge/Demo%20decomp-32%25%20(802%2F2%2C535%20functions)-E74C3C)](docs/DEMO_PROGRESS.md)
 
 > **Bringing the Odyssey into another dimension.**
 >
@@ -64,7 +65,9 @@ Cappy is not a button press to throw him. You move your hand, grab him with the 
 
 Be honest about this. It's early.
 
-**There is no playable build yet. There is no VR code yet. There is no APK.**
+**There is no playable demo yet.** But there are test APKs running on a Quest 3 now. The latest one, v0.12, holds the world still when you turn your head, and Cappy grabs and stays with your hand. There is still a shader issue making his colours noisy, and the throw still needs work.
+
+**Demo decomp is at 32%: 802 / 2,535 functions matched.** Topper is 119/179, Cappy is 121/189, Bowser is the big blocker at 192/1,147. Full breakdown in [`docs/DEMO_PROGRESS.md`](docs/DEMO_PROGRESS.md). The badge at the top of this page shows the same number, and it gets updated by hand when the count moves.
 
 As of 2026-11-09:
 
