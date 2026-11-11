@@ -2,6 +2,7 @@
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Project%20Plumb%20VR-5865F2?logo=discord&logoColor=white)](https://discord.gg/XUtAtkdumP)
 [![Demo progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F2whitelol%2Fproject-plumb-vr%2Fmain%2Fdemo-progress.json&cacheSeconds=60)](docs/DEMO_PROGRESS.md)
+[![Recompendium](https://recompendium.com/insignias/port/super-mario-odyssey-project-plumb-vr.svg)](https://recompendium.com/en/port/super-mario-odyssey-project-plumb-vr/)
 
 > **Bringing the Odyssey into another dimension.**
 >
