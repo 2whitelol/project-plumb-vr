@@ -12,9 +12,10 @@ foundation works — it does NOT contain any game code yet.
 - Exits cleanly on session EXITING / LOSS_PENDING / app destroy.
 
 ## What built
-- **Test APK:** `build-manual/plumbvr-foundation-test.apk`
+- **First test APK:** `build-manual/plumbvr-foundation-test.apk`
   - 3,547,793 bytes, SHA-256 `226fb7b12cee9781be032b08c9574d6c0b73c7a8b5660b1a0b2005323f3d8496`
   - Package `com.plumbvr.foundation`, versionCode 1, versionName 0.1
+- **Latest test APK (2026-11-10): v0.33.4-hotfix**, `plumbvr-v33-4-hotfix.apk`, 6,775,544 bytes, SHA-256 `c45c2d05a647d9633d8145b671e0da0d57f7e9f292ad8dc5ec093a7f6d263a59`, versionCode 37. Mario first person with real glove models, connected body and arms, real HackCap throw logic. The source in this repo is still the early v0.1 snapshot above, not the current test build. Test builds are delivered to testers directly, not published here.
   - `aapt2 dump badging`: sdkVersion 29, targetSdkVersion 34, native-code
     `arm64-v8a`, launchable NativeActivity, `android.hardware.vr.headtracking`
   - Contains `lib/arm64-v8a/libopenxr_loader.so` (1,661,048 B, OpenXR 1.1.65),
@@ -69,7 +70,7 @@ $BT/apksigner verify plumbvr-foundation-test.apk
 $BT/aapt2 dump badging plumbvr-foundation-test.apk
 ```
 
-## Install / test on Quest (not yet done — no Quest access from this VM)
+## Install / test on Quest (Quest-tested since v0.6)
 ```sh
 adb install -r plumbvr-foundation-test.apk
 adb logcat -s PlumbVR   # look for "OpenXR instance created", "OpenXR session created", "Session begun"
@@ -81,10 +82,9 @@ Watch for: black screen (swapchain/format issue), crash on launch
 (session never reaches READY).
 
 ## Still missing / not verified
-- **Never run on a Quest.** Everything above is static verification only:
-  build exit 0, badging, APK contents, signature. No runtime test exists.
+- **Quest-tested now.** v0.6 through v0.33.4 have all been run on a real Quest 3 by White. The v0.33.4 test is in progress 2026-11-11.
 - Gradle build on this VM (see above) — retry on a machine with a working
   Gradle daemon, or keep the manual build.
-- No input handling yet (controllers), no game code, no comfort options.
+- No video, no music, no textures yet in the app. Real Mario textures are decoded and queued for v0.34, Cappy eye shape for v0.35.
 - The debug keystore in `build-manual/` is a test key — the final demo APK
   gets its own key signature at the end, per White's instruction.

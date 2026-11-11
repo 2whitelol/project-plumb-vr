@@ -1,13 +1,13 @@
 # PROJECT PLUMB VR — PROJECT_STATUS.md
 
-Last updated: 2026-11-09
+Last updated: 2026-11-11
 Owner: White (formerly L, changed 2026-11-09; Quest 3 and Quest 3S, no PC) / Developer: Aidan (Muse Secure VM)
 
 ## Current milestone
 Milestone 1 — ENVIRONMENT AUDIT: DONE (2026-11-09)
 Milestone 2 — REPOSITORY ANALYSIS: DONE 2026-11-09 — NSO extracted, setup.py succeeded, build dir configured. tools/build.py + tools/check DONE 2026-11-09 (build exit 0, check "OK").
-Milestone 3 — ANDROID VR FOUNDATION: TEST APK BUILT 2026-11-09 — native OpenXR test APK at workspace/project-plumb-vr/vr-foundation/build-manual/plumbvr-foundation-test.apk (3,547,793 B, SHA-256 226fb7b1…, package com.plumbvr.foundation, arm64-v8a, libopenxr_loader.so 1.1.65 inside, apksigner verify OK). Built manually (aapt2 + NDK clang + zipalign + apksigner) because the Gradle daemon is broken on this VM (see DEVELOPMENT_LOG.md). NOT yet run on a Quest — install/logcat test still to do on real hardware.
-Toolchain prep (Milestone 3 groundwork): DONE 2026-11-09, with one correction (see below): the VM was replaced after prep, wiping apt-installed tools; durable ninja 1.13.1 + ccache 4.10.2 now live in ~/workspace/tools-bin. OpenXR SDK 1.1.65 + Gradle 8.14.3 + durable Temurin JDK 17.0.21 installed 2026-11-09 — Milestone 3 toolchain is now complete.
+Milestone 3 — ANDROID VR FOUNDATION: DONE, test APKs running on Quest 3. Latest test APK v0.33.4-hotfix, delivered 2026-11-10 21:42 (versionCode 37, 6,775,544 B, SHA-256 c45c2d05…). Mario first person with real glove models, connected body and arms, real HackCap throw logic. Quest test of v0.33.4 in progress 2026-11-11. The foundation source in this repo is still the early v0.1 snapshot, not the current test build.
+Decomp: demo 1,266 / 2,535 (49.9%) as of 2026-11-11 09:48, whole game 20,679 / 74,171 (27.9%). Next milestone after 50% is 80% (2,028 / 2,535), set by White 2026-11-11.
 
 ## Environment audit — verified 2026-11-09, toolchain installed 2026-11-09
 - VM: Ubuntu 24.04.5 LTS, x86_64, AMD EPYC 9D25, 4 vCPU visible (runtime shared CPU 1.5), 7.7 GiB RAM total, ~0.5 GiB available, 1 GiB swap
@@ -65,5 +65,6 @@ Toolchain prep (Milestone 3 groundwork): DONE 2026-11-09, with one correction (s
 - Milestone 2 DONE. Log: workspace/project-plumb-vr/build-20261109.log, check log: workspace/project-plumb-vr/check-20261109.log. Disk: 136 GB free.
 
 ## Next steps
-1. Milestone 3 (Android VR foundation): toolchain complete — OpenXR SDK 1.1.65, Gradle 8.14.3, Temurin JDK 17.0.21, Android SDK/NDK r27c. Next is the initial test APK work.
-2. Decomp help (approved by White 2026-11-09, in parallel with the VR port): candidate functions identified in the decomp-help audit in DEVELOPMENT_LOG.md — no PR submitted yet.
+1. Test APKs: v0.33.4 Quest test in progress 2026-11-11 (White sent a test video 09:42, errors being fixed in main chat). Next builds queued: v0.34 real Mario textures, v0.35 Cappy eye shape.
+2. Decomp: keep matching toward 50% (2 to go), then 80%. Map work starts once Mario and Cappy are error-free (White 2026-11-10).
+3. Full-class PRs: 4 agents completed all functions in the wave-1 PR classes (#1405-#1414) 2026-11-10, per Narr's full-class advice. Which full-class PR goes up first is White's call.

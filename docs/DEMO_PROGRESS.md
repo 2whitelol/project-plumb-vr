@@ -4,7 +4,7 @@ How far the real demo is. Not the whole game, just the demo slice.
 
 ## The number
 
-**1,014 / 2,535 demo functions matched (40.0%)** as of 2026-11-10 17:41 CST.
+**1,266 / 2,535 demo functions matched (49.9%)** as of 2026-11-11 09:48 CST.
 
 That is the count from the local OdysseyDecomp clone's `data/file_list.yml`, for the 104 demo objects named in `docs/demo-gap-report.md`. Matching means byte-for-byte identical to the original game code.
 
@@ -14,13 +14,13 @@ The demo is both parts together. Part 1, the opening Bowser fight, the fall, mee
 
 | Area | Matched | Total | Percent |
 |---|---|---|---|
-| Topper (Boss/Stacker) | 119 | 179 | 66.5% |
-| Cappy (Player/HackCap) | 137 | 189 | 72.5% |
-| NPCs (Frog, TalkNpc, Cap NPCs) | 222 | 252 | 88.1% |
-| Mario movement and player code | 254 | 664 | 38.3% |
-| Bowser (Boss/Koopa) | 202 | 1,147 | 17.6% |
+| Topper (Boss/Stacker) | 147 | 179 | 82.1% |
+| Cappy (Player/HackCap) | 146 | 189 | 77.2% |
+| NPCs (Frog, TalkNpc, Cap NPCs) | 226 | 252 | 89.7% |
+| Mario movement and player code | 319 | 664 | 48.0% |
+| Bowser (Boss/Koopa) | 348 | 1,147 | 30.3% |
 | Demo flow, camera, opening scene | 80 | 104 | 76.9% |
-| **Total** | **1014** | **2,535** | **40.0%** |
+| **Total** | **1266** | **2,535** | **49.9%** |
 
 Bowser is the biggest blocker. His attack states are almost all still at zero. Mario movement is next. Topper and Cappy moved a lot today, they were near zero this morning.
 
@@ -34,15 +34,17 @@ It links here, so anyone can see what the number counts.
 
 Badge now:
 
-`Demo decomp — 40% (1,014/2,535 functions)`
+`Demo decomp — 50% (1,266/2,535 functions)`
 
-## Next milestone: 50%
+## Next milestone: 50%, then 80%
 
-Set 2026-11-09. The demo is ready when **1,268 / 2,535 functions match (50%)**. That is 254 more than the 1,014 counted now.
+Set 2026-11-09. The demo is ready when **1,268 / 2,535 functions match (50%)**. That is 2 more than the 1,266 counted now.
+
+After 50%, the next milestone is **80%: 2,028 / 2,535 functions** (762 more from now). Set by White 2026-11-11.
 
 How it adds up:
 
-- Finish Topper (60 left), Cappy (52 left), and the NPCs (30 left): 142
+- Finish Topper (32 left), Cappy (43 left), and the NPCs (26 left): 101
 - Mario core movement, Jump, WallCatch, PoleClimb, Rolling, Wait, SpinCap: about 180 of the 235 left there
 - Bowser attack states, KoopaCap, KoopaCapPlayer, ThrowCap, RingBeam: about 90 of the 955 left there
 
@@ -50,7 +52,7 @@ Matching is decomp progress, not a playable demo. 50% matched does not mean half
 
 ## What this number is not
 
-It is not the whole game. The whole decomp is 20,247 / 74,171 functions matched (27.3%) at the same time, and that is a different count.
+It is not the whole game. The whole decomp is 20,679 / 74,171 functions matched (27.9%) at the same time, and that is a different count.
 
 It is not a playable demo either. Matching code is the game logic decompiled, not a game running on a Quest. The test APKs in VR are separate work, and they are not the demo yet.
 

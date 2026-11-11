@@ -65,20 +65,18 @@ Cappy is not a button press to throw him. You move your hand, grab him with the 
 
 Be honest about this. It's early.
 
-**There is no playable demo yet.** But there are test APKs running on a Quest 3 now. The latest one, v0.12, holds the world still when you turn your head, and Cappy grabs and stays with your hand. There is still a shader issue making his colours noisy, and the throw still needs work.
+**There is no playable demo yet.** But there are test APKs running on a Quest 3 now, and they have come a long way since v0.12. The latest one, **v0.33.4-hotfix** (versionCode 37, 6,775,544 bytes, SHA-256 `c45c2d05a647d9633d8145b671e0da0d57f7e9f292ad8dc5ec093a7f6d263a59`, delivered 2026-11-10), has Mario in first person with his real glove models on the controllers, a connected body and arms, and Cappy thrown with the real decompiled HackCap throw logic: grip to grab, real release velocity to throw, lock-on to a capturable target, and return to the head. The peach-fill bug from v0.33 is fixed, and the glove orientation fix in v0.33.4 is the one being Quest-tested now. Still no video, no music, no textures yet in the app (the real Mario textures are decoded and queued for v0.34), and the eye-shape work is queued for v0.35.
 
-**Demo decomp is at 32%: 802 / 2,535 functions matched.** Topper is 119/179, Cappy is 121/189, Bowser is the big blocker at 192/1,147. Full breakdown in [`docs/DEMO_PROGRESS.md`](docs/DEMO_PROGRESS.md). The badge at the top of this page shows the same number, and it updates on its own as decomp lands.
+**Demo decomp is at 49.9%: 1,266 / 2,535 functions matched** as of 2026-11-11. Topper is 147/179, Cappy is 146/189, NPCs are 226/252, Bowser is the big blocker at 348/1,147. Full breakdown in [`docs/DEMO_PROGRESS.md`](docs/DEMO_PROGRESS.md). The badge at the top of this page shows the same number, and it updates as decomp lands. The whole game decomp is at 20,679 / 74,171 (27.9%) at the same time.
 
-As of 2026-11-09:
+As of 2026-11-11:
 
-- Environment audited. Ubuntu 24.04 VM, git, python, cmake, gcc all there.
-- Toolchain prep done 2026-11-09. Android SDK is in, NDK r27c, ninja, clang 18, JDK 17, Rust, and a Python venv with the decomp modules. Still missing: OpenXR SDK and Gradle.
-- Decomp snapshot on disk. OdysseyDecomp-master, 2026-09-29, 2,244 files. Plus a fresh OdysseyDecomp clone, submodules filled.
+- Toolchain done. OpenXR SDK 1.1.65, Gradle 8.14.3, Temurin JDK 17.0.21, Android SDK with NDK r27c, durable ninja 1.13.1 and ccache 4.10.2.
 - The NSP is done. The Super Mario Odyssey 1.0.0 NSP finished downloading 2026-11-09 around 11:08, verified at 5,611,009,601 bytes exactly, PFS0 header, 8 files inside. It's not in this repo and it never will be.
-- NSO extraction has started. That's pulling the main NSO out of the ExeFS with my own prod.keys.
-- Research is done for the opening, the wedding, Cap Kingdom, Topper, all 17 kingdoms, and the 52 captures. It's in `docs/`.
-- No Android or OpenXR host code written yet.
-- No APK, nothing to sideload yet.
+- NSO extracted and the decomp setup done. `tools/build.py` and `tools/check` pass on the local clone.
+- RomFS extracted, 4,636 files. Mario's model, gloves and body converted from the ROM. The real SMO menu extracted. Cap Kingdom ground partly converted. All 51 audio banks unpacked, 7,231 audio files catalogued, and a full-game reference written from the full walkthrough.
+- Test APKs v0.6 through v0.33.4 built and Quest-tested in stages. The foundation app in this repo (`vr-foundation/`) is an early snapshot, v0.1, not the current test build. The current test builds are delivered to testers directly, not published here.
+- Next milestone after 50% is 80% of the demo: 2,028 / 2,535 functions.
 
 The decomp is the long pole. The 2026-09-29 snapshot has source for about 19% of the game's object files by file count, 597 of 3,126 `.o` entries. The published numbers don't agree with each other, so I'm not picking one and calling it the truth. The project's own page said 25.611% matching on 2026-11-09. Other trackers said 15.77% on 2026-10-26 and 16% on 2026-11-06. Different dates, different ways of counting. And a decomp build that works still isn't a playable game. The missing systems have to be decompiled or written from scratch for the demo slice.
 
@@ -117,7 +115,7 @@ tools/check
 
 That only checks the decomp. It doesn't make a playable game. The Android and OpenXR build steps still need writing. Put durable tools under `~/workspace/`, not `/usr`, `/opt`, or `/tmp`. See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) and [`docs/BLOCKERS.md`](docs/BLOCKERS.md) for the environment audit and what's still blocked.
 
-APK signing is an end of demo step only. Don't compile or sign anything yet.
+APK signing is an end of demo step only for the real release key. The test APKs are debug-signed with a test key and delivered to testers directly, they are not published in this repo.
 
 ## Contributing
 
